@@ -2,7 +2,7 @@
 pragma solidity ^0.8.18;
 
 contract BountyDapp {
-    
+
     struct Bounty {
         address creator;
         uint256 amount;
@@ -12,7 +12,7 @@ contract BountyDapp {
 
     mapping(uint256 => Bounty) public idToBounty;
     uint256 public bountyCount;
-    mapping(uint256 => mapping(address => bool)) submissions;
+    mapping(uint256 => mapping(address => bool)) public submissions;
 
 
     event BountyCreated(uint256 indexed id, address indexed creator, uint256 amount);
