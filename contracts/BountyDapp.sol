@@ -56,8 +56,8 @@ contract BountyDapp {
 
         Bounty storage bounty = idToBounty[_id];
         require(bounty.creator == msg.sender, "Only bounty creator can accept a submission");
-        require(bounty.winner != address(0), "Bounty already accepted"); 
-        require(!submissions[_id][_winner], "The specified winner has not submitted a solution yet");       
+        require(bounty.winner == address(0), "Bounty already accepted"); 
+        require(submissions[_id][_winner], "The specified winner has not submitted a solution yet");       
        
         bounty.winner = payable(_winner);
 
