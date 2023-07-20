@@ -2,7 +2,7 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-describe("CreateBounty", function () {
+describe("Create Bounty", function () {
 
   let bountyDapp;
   let dappOwner;
